@@ -4,29 +4,11 @@ void setup() {
   size (400, 500);
   display();
   population(); // rect() variables
+  textSetup();
 } //End setup
-
 //
 void draw() {
-  for ( int i=0; i<numPadColumns; i++ ) {
-    for ( int j=0; j<numPadRows-1; j++ ) {
-      rect(x[i], y[j], widthSquare, heightSquare);
-    } //End FOR
-  } //End FOR
-  /* Primitive Variables in drawing rect()s
-   rect(x0, y0, widthSquare, heightSquare);
-   rect(x0, y1, widthSquare, heightSquare);
-   rect(x0, y2, widthSquare, heightSquare);
-   rect(x0, y3, widthSquare, heightSquare);
-   rect(x1, y0, widthSquare, heightSquare);
-   rect(x1, y1, widthSquare, heightSquare);
-   rect(x1, y2, widthSquare, heightSquare);
-   rect(x1, y3, widthSquare, heightSquare);
-   rect(x2, y0, widthSquare, heightSquare);
-   rect(x2, y1, widthSquare, heightSquare);
-   rect(x2, y2, widthSquare, heightSquare);
-   rect(x2, y3, widthSquare, heightSquare);
-   */
+  numPadRects();
 } //End draw
 //
 void mousePressed() {
