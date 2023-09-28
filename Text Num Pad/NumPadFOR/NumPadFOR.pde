@@ -9,6 +9,14 @@ void setup() {
 //
 void draw() {
   numPadRects();
+  fill(purple); //Ink, hexidecimal copied from Color Selector
+  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+  size = 50;
+  textFont(font, 50); //Change the number until it fits, largest font size
+  //
+  text(title, titleX, titleY, titleWidth, titleHeight);
+  fill(whiteInk); //reset
 } //End draw
 //
 void mousePressed() {
