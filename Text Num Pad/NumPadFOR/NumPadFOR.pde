@@ -2,7 +2,7 @@
  */
 //
 //Global Variables
-int appWidth, appHeight; //CAUTION: decimals are truncated in ints, not floats or doubles
+
 float widthSquare, heightSquare;
 int numPadColumns = 3;
 float[] x = new float [numPadColumns];
@@ -12,12 +12,10 @@ float border=0.0;
 //
 void setup() {
   size (400, 500);
-  appWidth = width;
-  appHeight = height;
+  display();
   //
   //Population of rect() variables
-  widthSquare = appWidth*1/4;
-  heightSquare = widthSquare;
+  
   if ( widthSquare*8 <= appHeight ) {
     println("true");
     // Empty IF
