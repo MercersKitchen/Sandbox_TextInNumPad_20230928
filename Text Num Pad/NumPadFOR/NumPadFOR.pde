@@ -16,15 +16,7 @@ void setup() {
   //
   population(); // rect() variables
   
-  if ( widthSquare*8 <= appHeight ) {
-    println("true");
-    // Empty IF
-  } else {
-    println("false");
-    widthSquare = heightSquare = appHeight*1/8;
-    border = appWidth - ( widthSquare*1/2 + widthSquare*3 + widthSquare*1/2 );
-    border = border*1/2; // using one variable saves system resources
-  } //End Height Error Check
+  
   /* Primitive Variable Prototyping
    x0 = widthSquare*1/2;
    x1 = widthSquare*3/2;
