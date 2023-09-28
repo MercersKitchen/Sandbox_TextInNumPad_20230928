@@ -14,7 +14,7 @@ void setup() {
   size (400, 500);
   display();
   //
-  //Population of rect() variables
+  population(); // rect() variables
   
   if ( widthSquare*8 <= appHeight ) {
     println("true");
