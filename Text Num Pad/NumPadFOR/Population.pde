@@ -14,4 +14,12 @@ void population() {
     border = border*1/2; // using one variable saves system resources
   } //End Height Error Check
   //
+  // Writing X&Y rect() Array Variables
+  for ( int i=0; i<numPadRows; i++ ) {
+    if ( i<numPadColumns ) x[i] = writeCoordinate(i, 1);
+    y[i] = writeCoordinate(i, 5);
+  } // End FOR
+  //printArray(x);
+  //printArray(y);
+  //
 } //End Population

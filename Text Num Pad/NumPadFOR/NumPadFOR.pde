@@ -13,37 +13,9 @@ float border=0.0;
 void setup() {
   size (400, 500);
   display();
-  //
   population(); // rect() variables
+  //
   
-  
-  /* Primitive Variable Prototyping
-   x0 = widthSquare*1/2;
-   x1 = widthSquare*3/2;
-   x2 = widthSquare*5/2;
-   y0 = widthSquare*5/2;
-   y1 = widthSquare*7/2;
-   y2 = widthSquare*9/2;
-   y3 = widthSquare*11/2;
-   y4 = widthSquare*14/2;
-   */
-  /* Separate FOR Loops
-   for ( int i=0; i<numPadColumns; i++ ) { // i stops for x not y
-   x[i] = widthSquare*(2*i+1)/2;
-   println("Inside x", x[i] );
-   } //End FOR
-   for ( int i=0; i<numPadRows; i++ ) {
-   y[i] = widthSquare*(2*i+5)/2;
-   println("Inside y", y[i]);
-   } // End FOR
-   */
-  // Combined FOR Loops
-  for ( int i=0; i<numPadRows; i++ ) {
-    if ( i<numPadColumns ) x[i] = writeCoordinate(i, 1);
-    y[i] = writeCoordinate(i, 5);
-  } // End FOR
-  printArray(x);
-  printArray(y);
 } //End setup
 float writeCoordinate (int i, int oddStart) {
   return border + ( widthSquare*(2*i+oddStart)/2 );
