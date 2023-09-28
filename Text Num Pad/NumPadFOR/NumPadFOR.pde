@@ -3,12 +3,7 @@
 //
 //Global Variables
 
-float widthSquare, heightSquare;
-int numPadColumns = 3;
-float[] x = new float [numPadColumns];
-int numPadRows = 5;
-float[] y = new float [numPadRows];
-float border=0.0;
+
 //
 void setup() {
   size (400, 500);
@@ -17,9 +12,7 @@ void setup() {
   //
   
 } //End setup
-float writeCoordinate (int i, int oddStart) {
-  return border + ( widthSquare*(2*i+oddStart)/2 );
-} //End writeCoordiante
+
 //
 void draw() {
   for ( int i=0; i<numPadColumns; i++ ) {
