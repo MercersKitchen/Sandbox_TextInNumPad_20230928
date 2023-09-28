@@ -1,16 +1,9 @@
 /* Program Notes: reviews text and introduces a text calculator
  */
-//
-//Global Variables
-
-
-//
 void setup() {
   size (400, 500);
   display();
   population(); // rect() variables
-  //
-  
 } //End setup
 
 //
