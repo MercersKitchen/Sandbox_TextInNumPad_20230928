@@ -1,5 +1,5 @@
 PFont font;
-color purple= , white= ;
+color purple=#ED03FF, white=#FFFFFF;
 //
 void textSetup() {
   //Fonts from OS
@@ -11,16 +11,28 @@ void textSetup() {
   //
 } //End Text Setup
 //
-purple, CENTER, CENTER, font, title, titleX, titleY, titleWidth, titleHeight
-void textDraw( color ink, int alignX, int alignY, PFont font, String text, float rectX, float rectY, float rectWidth, float rectHeight,  ) {
+void textDraw( color ink, int alignX, int alignY, PFont font, String text, float rectX, float rectY, float rectWidth, float rectHeight ) {
   fill( ink );
   textAlign ( alignX, alignY);
-  float size = 50;
-  textFont(font, size); //Change the number until it fits, largest font size
+  float size = textCalculator(rectWidth, text) ; // //prints at 65
+  println("4. ", textWidth(text), rectWidth, size);
+  textFont(font, size); //Change the number until it fits, largest font size //prints at 65
   text( text, rectX, rectY, rectWidth, rectHeight );
   fill( white ); //default
 } //End Text Draw
-
-
-
 //
+float textCalculator( float rectWidth, String text) {
+  float size = appWidth;
+  textSize(size);
+  println("1. ", textWidth(text), rectWidth, size);
+  while ( textWidth (text) >= rectWidth ) {
+    size = size * 0.99;
+    textSize ( size );
+  } //End WHILE
+  textSize ( size );
+  println("2. ", textWidth (text), rectWidth, size);
+  size = textWidth (text);
+  textSize ( size );
+  println("3. ", textWidth (text), rectWidth, size);
+  return size;
+} //End Text Calcualtor

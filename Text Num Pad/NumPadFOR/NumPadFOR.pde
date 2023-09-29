@@ -11,7 +11,8 @@ void draw() {
   numPadRects();
   //
   //CONTINUE HERE, numbers into num pad
-  
+  String one="1";
+  textDraw( purple, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare );
 } //End draw
 //
 void mousePressed() {
